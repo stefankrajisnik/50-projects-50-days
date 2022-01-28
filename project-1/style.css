@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Muli&display=swap);
 
-
-*{
-    box-sizing: border-box ;
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -13,17 +12,34 @@ body {
     justify-content: center;
     overflow: hidden;
     margin: 0;
-   
-    
 }
 
-.container{
+.container {
     display: flex;
     width: 90vw;
-
 }
 
-.panel{
+.panel-one {
+    background-image: url(https://images.unsplash.com/photo-1518873890627-d4b177c06e51?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+.panel-two {
+    background-image: url(https://images.unsplash.com/photo-1529288871968-9945adb0588f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+.panel-three {
+    background-image: url(https://images.unsplash.com/photo-1542202229-7d93c33f5d07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+.panel-four {
+    background-image: url(https://images.unsplash.com/photo-1508255139162-e1f7b7288ab7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+}
+
+.panel-five {
+    background-image: url(https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80);
+}
+
+.panel {
     background-size: cover ;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,27 +56,25 @@ body {
 .panel h3 {
     position: absolute;
     font-size: 24px;
-    bottom:20px;
-    left:20px;
+    bottom: 20px;
+    left: 20px;
     opacity: 0;
 }
 
 .panel.active { 
-    flex:5;
+    flex: 5;
 }
 
 .panel.active h3{
-    opacity:1;
+    opacity: 1;
 }
-@media(max-width:580px) {
 
+@media(max-width:580px) {
     .container{
         width: 100vw;
     }
 
-    .panel:nth-of-type(5),.panel:nth-of-type(4){
+    .panel:nth-of-type(5),.panel:nth-of-type(4) {
         display: none;
     }
-    
-
 }
