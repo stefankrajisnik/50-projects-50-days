@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+h1{
+    margin: 10px;
+}
+
+.box{
+    margin: 10px;
+    background-color: #a09ab3;
+    font-size: 75px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 9px 4px 5px rgba(0,0,0,0.3);
+    transform: translateX(200%);
+    transition: transform 0.4s ease;
+
+}
+
+.box:nth-of-type(even){
+    transform: translateX(-200%);
+}
+
+.box.show{
+    transform: translateX(0);
+}
