@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --left-bg-color:rgba(43, 32, 54, 0.7);
+    --right-bg-color:rgba(77, 73, 82, 0.7);
+    --hover-width: 75%;
+    --other-width:25%;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #333;   
+}
+
+.split{
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    overflow: hidden;   
+}
+
+.split.left {
+    left: 0;
+    background: url('https://images.unsplash.com/photo-1607853202273-797f1c22a38e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
+.split.left::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg-color);
+}
+
+.split.right{
+    right: 0;
+    background: url('https://images.unsplash.com/photo-1620815023653-f65690227267?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.split.right::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:var(--right-bg-color);
+}
+
+h1 {
+    color: rgb(38, 37, 87);
+    font-size: 3rem;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    user-select: none;
+}
+
+.btn{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.7rem;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid white;
+    width: 12rem;
+    text-align: center;
+    border-radius: 2px;
+    padding: 0.6rem;
+    margin-top: 0.5rem;
+    user-select: none;
+    font-weight: bold;
+}
+
+.split.right, .split.left, .split.right::before, .split.left::before{
+    transition: all 0.8s ease-in-out;
+}
+
+.hover-left .left{
+    width: var(--hover-width);   
+}
+
+.hover-left .right{
+    width: var(--other-width);
+}
+
+.hover-right .right{
+    width: var(--hover-width);
+}
+
+.hover-right .left{
+    width: var(--other-width);
+}
+
+@media(max-width:800px) {
+    h1{
+        font-size: 2rem;
+        top: 22% ;
+    }
+
+    .btn{
+        width: 9rem;
+        white-space: nowrap;
+    }
+}
