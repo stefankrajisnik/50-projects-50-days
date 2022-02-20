@@ -16,3 +16,13 @@ window.addEventListener('keydown', (e)=>{
         </div>
 `
 })
+
+let e
+let mojaFun = function(){
+    window.addEventListener('keydown', function(e){
+    console.log(e)
+})
+}
+
+
+mojaFun(e)
