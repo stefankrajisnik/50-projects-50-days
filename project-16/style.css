@@ -73,31 +73,31 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex:1;
+    flex: 1;
     transition: 0.3s ease;
 }   
 
 .remained span{
     font-size: 20px;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .remained small{
     font-size: 12px;
 }
 
-.percentage{
-    background-color:var(--fill-color);
+.percentage {
+    background-color: var(--fill-color);
     display: flex;
     align-items: center;
-    justify-content:center;
-    font-weight:bold;
-    font-size:30px;
-    height:0;
-    transition:0.3s ease;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    height: 0;
+    transition: 0.3s ease;
 }
 
-.text{
-    text-align:center;
-    margin:0 0 5px;
+.text {
+    text-align: center;
+    margin: 0 0 5px;
 }
