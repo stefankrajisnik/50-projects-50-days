@@ -8,6 +8,9 @@
 </head>
 <body>
 
+  <p id="overallProgressDescription"></p>
+  <progress id="overallProgress" value="0" max="100"> :) </progress>
+
   <ul>
     <li><a href="project-1/index.html">Project 1</a></li>
     <li><a href="project-2/index.html">Project 2</a></li>
@@ -60,6 +63,28 @@
     <li><a href="project-*/index.html">Project *</a></li>
     <li><a href="project-*/index.html">Project *</a></li>
   </ul>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const projects = document.querySelectorAll('a');
+      const totalProjects = projects.length;
+      
+      let finishedProjects = 0;
+      projects.forEach(project => {
+        if (!project.innerText.includes('*')) {
+          finishedProjects++;
+        }
+      });
+
+      const overallProggres = document.getElementById('overallProgress');
+      overallProggres.max = totalProjects;
+      overallProggres.value = finishedProjects / totalProjects * totalProjects;
+      overallProggres.innerText = finishedProjects / totalProjects * totalProjects;
+      
+      const overallProgressDescription = document.getElementById('overallProgressDescription');
+      overallProgressDescription.innerText = `Finished ${finishedProjects} out of ${totalProjects} projects.`;
+    });
+  </script>
   
 </body>
 </html>
