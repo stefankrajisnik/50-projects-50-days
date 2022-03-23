@@ -1,16 +1,16 @@
 const counters = document.querySelectorAll('.counter')
 
 counters.forEach(counter => { 
-    counter.innerText = '0'
+    counter.innerText = ""
 
     const updateCounter = () =>{
         const target = +counter.getAttribute('data-target')
         const counterText = +counter.innerText
 
-        const increment = target/100
+        const increment = target/200
 
         if(counterText<target){
-            counter.innerText = `${Math.round(counterText+increment)}`
+            counter.innerText = `${Math.ceil(counterText+increment)}`
             setTimeout(updateCounter,1)
         } else{
             counter.innerText = target
