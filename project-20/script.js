@@ -1,6 +1,6 @@
 const buttons = document.querySelectorAll('.ripple');
 
-buttons.forEach(button =>{
+buttons.forEach( button => {
     button.addEventListener('click', function(e) {
         const xCoordinateClick = e.clientX
         const yCoordinateClick = e.clientY
@@ -17,6 +17,10 @@ buttons.forEach(button =>{
         circle.style.top = `${insideY}px`
         circle.style.left = `${insideX}px`
         
-        button.appendChild(circle)
+        this.appendChild(circle)
+
+        setTimeout(() => circle.remove(),1000)
+
     })
 })
+
