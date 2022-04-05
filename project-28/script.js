@@ -1,11 +1,3 @@
-// fetch('https://api.github.com/users/defunkt')
-//     .then(response => {
-//         return response.json();
-//     })
-//     .then(data => {
-//         console.log(data);
-//     })
-
 const username = 'stefankrajisnik';
 const password = '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';
 const credentials = btoa(`${username}:${password}`);
@@ -15,23 +7,6 @@ const authorizationHeader = {
 };
 
 let timeout;
-// kucamo async jer je fetch funkcija koja je asinhrona
-
-// async function getGithubUser(username) {
-//     const user = await fetch(`https://api.github.com/users/${username}`, {
-//         headers: authorizationHeader,
-//     })
-//     .then(response => {
-//         return response.json();
-//     })
-    // zasto ovdje data ako je moglo opet response response ?
-    
-//     .then(data => {
-//         return data;
-//     });
-
-//     return user;
-// }
 
 async function getGithubUser(username) {
     const response = await fetch (`https://api.github.com/users/${username}`, {
@@ -44,8 +19,7 @@ async function getGithubUser(username) {
 
     
 }
-// const populateGithubUser = (user) => { }  Isto kao ovo dole??
-// function populateGithubUser(user) { }    Isto kao ovo dole?? 
+
 const populateGithubUser = user => {
     console.log(user);
 
