@@ -26,28 +26,25 @@ function stopSongs(){
         song.currentTime = 0;
     })
 }
-// const handleSound = (element, index) => {
-//     console.log('Prolazimo kroz element: ', element);
-//     console.log('Prolazimo kroz element na indeksu: ', index);
-// }
+const handleSound = (element, index) => {
+    console.log('Prolazimo kroz element: ', element);
+    console.log('Prolazimo kroz element na indeksu: ', index);
+}
 
-// function handleSound2(element, index) {
-//     console.log('Prolazimo kroz element: ', element);
-//     console.log('Prolazimo kroz element na indeksu: ', index);
-// }
+function handleSound2(element, index) {
+    console.log('Prolazimo kroz element: ', element);
+    console.log('Prolazimo kroz element na indeksu: ', index);
+}
 
-// sounds.forEach(handleSound)
-// sounds.forEach(handleSound2)
+sounds.forEach(handleSound)
+sounds.forEach(handleSound2)
 
-// sounds.forEach((element, index) => {
-//     console.log('Prolazimo kroz element: ', element);
-//     console.log('Prolazimo kroz element na indeksu: ', index);
-// })
+sounds.forEach((element, index) => {
+    console.log('Prolazimo kroz element: ', element);
+    console.log('Prolazimo kroz element na indeksu: ', index);
+})
 
-// sounds.forEach(function(element, index) {
-//     console.log('Prolazimo kroz element: ', element);
-//     console.log('Prolazimo kroz element na indeksu: ', index);
-// }
-// )
-
-
+sounds.forEach(function(element, index) {
+    console.log('Prolazimo kroz element: ', element);
+    console.log('Prolazimo kroz element na indeksu: ', index);
+})
