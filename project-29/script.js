@@ -18,6 +18,7 @@ loveMe.addEventListener('click', (e) => {
 })
 
 const createHeart = (e) => {
+    const message = document.querySelector('.hidden');
     const heart = document.createElement('i')
     heart.classList.add('fas')
     heart.classList.add('fa-heart')
@@ -42,5 +43,15 @@ const createHeart = (e) => {
      1000);
       
     times.innerHTML = ++timeClicked
+    
+    if(timeClicked === 10) {
+       const message = document.querySelector('.hidden');
+       message.classList.add('active')
+       message.innerText = 'Congrats, you are liked 10 times' 
+    }
+
+    if(timeClicked ===11){
+        message.innerText = 'You are still growing'
+       }
      
 }
