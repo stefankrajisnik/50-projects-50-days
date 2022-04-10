@@ -49,3 +49,13 @@ small {
         opacity: 0;
     }
 }
+
+.hidden {
+    color: bisque;
+    opacity: 0;
+}
+
+.active {
+    color: bisque;
+    opacity: 1;
+}

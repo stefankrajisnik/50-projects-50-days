@@ -93,4 +93,13 @@ body {
           max-width: 400px;
       }
   }
-  
+
+
+  #error {
+      color: red;
+      background-color: white;
+      margin-top: 2rem;
+      border-radius: 10px;
+      padding: 1rem;
+      text-transform: uppercase;
+  }
