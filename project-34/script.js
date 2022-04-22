@@ -2,15 +2,27 @@ const counter = document.querySelector('.counter')
 const nums = document.querySelectorAll('.nums span')
 const finalMessage = document.querySelector('.final')
 const spanNums = document.querySelectorAll('.span')
+const replay = document.querySelector('#replay')
 
 console.log(nums)
 
 runAnimation()
 
+function resetDOM() {
+    counter.classList.remove('hide')
+    finalMessage.classList.remove('show')
+
+    nums.forEach((num) => {
+        num.classList.value = ''
+    })
+
+    nums[0].classList.add('in')
+}
+
 
 function runAnimation() {
     nums.forEach((num,idx) => {
-        const next = num[idx+1]
+        
         const last = nums.length - 1
         num.addEventListener('animationend', (e) => {
             if(e.animationName === 'goIn' && idx !== last){
@@ -26,3 +38,8 @@ function runAnimation() {
     })
 }
 
+
+replay.addEventListener('click', () => {
+    resetDOM()
+    runAnimation()
+})
