@@ -30,7 +30,7 @@ async function getData() {
        userElement.innerHTML = `
        <img src="${user.picture.large}">
        <h4>${user.name.first} ${user.name.last}</h4>
-        <p>Name is: ${user.location.city}, ${user.location.country}</p>
+        <p>${user.location.country}, ${user.location.city}</p>
     `;
        
        result.appendChild(userElement);
