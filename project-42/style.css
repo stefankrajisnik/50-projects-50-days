@@ -11,7 +11,6 @@ body {
     margin: 0;
 }
 
-
 .container{
     width: 300px;
     border-radius: 5px;
@@ -49,12 +48,12 @@ body {
     padding: 0;
     max-height: 400px;
     overflow-y: auto;
-  }
+}
   
   .user-list li {
     display: flex;
     padding: 20px;
-  }
+}
   
   .user-list img {
     border-radius: 50%;
@@ -65,20 +64,20 @@ body {
   
   .user-list .user-info {
     margin-left: 10px;
-  }
+}
   
   .user-list .user-info h4 {
     margin: 0 0 10px;
-  }
+}
   
   .user-list .user-info p {
     font-size: 12px;
-  }
+}
   
   .user-list li:not(:last-of-type) {
     border-bottom: 1px solid #eee;
-  }
+}
   
   .user-list li.hide {
     display: none;
-  }
+}
