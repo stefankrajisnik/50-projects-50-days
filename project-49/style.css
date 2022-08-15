@@ -26,8 +26,6 @@ body>h2 {
     width: 400px;
     max-width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* background-color: white; */
-
 }
 
 .input {
@@ -39,8 +37,6 @@ body>h2 {
 }
 
 .input:focus {
-    /* outline: none; */
-    /* border: 1px solid rgb(179, 131, 226) ; */
     outline-color: rgb(179, 131, 226);
 }
 
