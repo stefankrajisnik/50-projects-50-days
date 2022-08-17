@@ -1,7 +1,6 @@
 const input = document.querySelector('.input');
 const todosUl = document.querySelector('.todos');
 
-
 window.onload = loadFromLS();
 window.onload = input.focus();
 window.onload = updateLS();
@@ -16,11 +15,8 @@ input.addEventListener('keypress', (e) => {
         liEl.textContent = inputTask;
         todosUl.appendChild(liEl);
 
-        //prevent reloading page
-        // e.preventDefault()
         input.value = ''
 
-        //add entered task in array
         const allTaskEl = document.querySelectorAll('li')
         allTaskEl.forEach(task => {
             todosArr.push({
@@ -29,7 +25,6 @@ input.addEventListener('keypress', (e) => {
             })
         });
 
-        //store every single task object from array into the Local Storage
         localStorage.setItem('task', JSON.stringify(todosArr))
 
 
@@ -83,15 +78,3 @@ function updateLS() {
 
     localStorage.setItem('task', JSON.stringify(todosArr))
 };
-
-
-    //DOES NOT WORK WITH GETELEMENTBYCLASSNAME 
-      //add entered task in array
-    //   const allTaskEl = document.getElementsByClassName('.singleTaskEl')
-    //   allTaskEl.forEach(task => {
-    //       todosArr.push({
-    //           text: task.innerText,
-    //           completed: task.classList.contains('completed')
-    //       })
-    //   });
-      // todosArr.push(inputTask);
